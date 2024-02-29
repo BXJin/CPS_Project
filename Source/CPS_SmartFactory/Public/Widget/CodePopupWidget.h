@@ -15,6 +15,9 @@ enum class PopupState : uint8
     // Add more states as needed
 };
 
+class UButton;
+class UTextBlock;
+
 UCLASS()
 class CPS_SMARTFACTORY_API UCodePopupWidget : public UUserWidget
 {
@@ -24,8 +27,12 @@ protected:
     virtual void NativeConstruct() override;
 
 public:
-    void SetPopupState(PopupState NewState);
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void SetPopup(PopupState NewState,const FText& Message);
 
-private:
+	void SetPopup_Implementation(PopupState NewState, const FText& Message);
+
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Code")
     PopupState CurrentState;
 };

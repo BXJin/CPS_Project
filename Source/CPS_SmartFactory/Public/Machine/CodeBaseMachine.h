@@ -29,10 +29,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Code")
 	UStaticMeshComponent* MachineMesh;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Code")
+	bool IsHighLight;
+
 public:
 	UFUNCTION(BlueprintCallable)
 	void SetHighLight();
 
-protected:
-	bool IsHighLight;
+	UFUNCTION(BlueprintCallable)
+	void OnOutLine();
+
+	UFUNCTION(BlueprintCallable)
+	void OffOutLine();
+
 };

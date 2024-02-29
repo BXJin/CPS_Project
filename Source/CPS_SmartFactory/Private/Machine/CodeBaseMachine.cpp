@@ -48,3 +48,27 @@ void ACodeBaseMachine::SetHighLight()
 
 }
 
+void ACodeBaseMachine::OnOutLine()
+{
+	if (!IsValid(MachineMesh))
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("NoMesh"));
+		return;
+	}
+
+	MachineMesh->SetRenderCustomDepth(true);
+	IsHighLight = true;
+}
+
+void ACodeBaseMachine::OffOutLine()
+{
+	if (!IsValid(MachineMesh))
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("NoMesh"));
+		return;
+	}
+
+	MachineMesh->SetRenderCustomDepth(false);
+	IsHighLight = false;
+}
+

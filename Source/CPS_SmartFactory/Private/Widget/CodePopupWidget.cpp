@@ -2,15 +2,19 @@
 
 
 #include "Widget/CodePopupWidget.h"
+#include "Components/Button.h"
+#include "Components/TextBlock.h"
 
 void UCodePopupWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
 
 	CurrentState = PopupState::Default;
+
+
 }
 
-void UCodePopupWidget::SetPopupState(PopupState NewState)
+void UCodePopupWidget::SetPopup_Implementation(PopupState NewState, const FText& Message)
 {
-	CurrentState = NewState;
 }
+

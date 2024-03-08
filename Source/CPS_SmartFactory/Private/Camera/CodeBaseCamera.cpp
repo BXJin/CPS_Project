@@ -194,7 +194,7 @@ void ACodeBaseCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 		// Zooming
 		EnhancedInputComponent->BindAction(ZoomAction, ETriggerEvent::Triggered, this, &ACodeBaseCamera::Zoom);
 
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("BindCompleted"));
+		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("BindCompleted"));
 	}
 }
 

@@ -59,13 +59,13 @@ public:
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Code")
-	float MinZoomLeght = 200.0f;
+	float MinZoomLeght = 100.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Code")
-	float MaxZoomLeght = 1500.0f;
+	float MaxZoomLeght = 500.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Code")
-	float DefaultArmLength = 1000.0f;
+	float DefaultArmLength = 350.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Code")
 	float ZoomStep = 20.0f;

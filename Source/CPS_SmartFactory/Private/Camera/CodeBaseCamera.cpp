@@ -44,7 +44,7 @@ void ACodeBaseCamera::BeginPlay()
 	Super::BeginPlay();
 
 	Controller->SetControlRotation(DefaultRotator);
-	SetActorLocation(FVector(0.0f, 0.0f, 0.0f));
+	SetActorLocation(FVector(0.0f, 0.0f, 10.0f));
 }
 
 void ACodeBaseCamera::Look(const FInputActionValue& Value)

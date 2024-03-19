@@ -1,11 +1,19 @@
 개발 언어 : UE Blueprint, C++
+
 서버 통신 관련 : UE - Http API 통신, CSV 및 Json 파싱, 파일 read
+
 카메라 관련 : Pawn 마우스 이동/회전/줌, 타임라인
+
 레벨 관련 : Persistent Level, 3D Widget Component(Actor)
+
 Mesh 관련 : 하이라이트
+
 UI 관련 : UUserWidget (c++), 위젯 바인딩, 팝업, UI 모듈화 (or Common UI)
+
 패키징 : 커맨드 라인, config 파일을 사용한 프로젝트 세팅
+
 기타 : 에러 발생 시 팝업, 데이터 불러오는 중 로딩, 해상도 조절
+
 
 
 -좌측하단 버튼들 기획
@@ -46,7 +54,8 @@ GEAR_PUMP(nodeId_14)
 최하위 설비(HYD_BLOCK) 버튼을 누르면 중간 설비(GEAR_PUMP) 설비와 동일하게 하이라이팅 및 캠 적용
 
 
-[3][4] 예시`
+[3]
+[4] 예시
 2.hotsaw(nodeId_14)
 GEAR_PUMP(nodeId_14)
 ---------------------------------------------------------------------------------------------------------------

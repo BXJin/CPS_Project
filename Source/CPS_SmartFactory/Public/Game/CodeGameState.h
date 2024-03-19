@@ -23,4 +23,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Code")
 	TArray<FName> TagsList;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Code")
+	TArray<int32> MachinesID;
 };

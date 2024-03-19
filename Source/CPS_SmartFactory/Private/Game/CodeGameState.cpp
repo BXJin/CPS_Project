@@ -23,8 +23,11 @@ void ACodeGameState::BeginPlay()
 	{
 		if ((Value->Tags).Num() != 0)
 			TagsList.AddUnique(Value->Tags[0]);
-		else
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("NoTag"));
+		//else
+		//	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("NoTag"));
+
+		MachinesID.Add(Value->MachineID);
 	}
 	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, FString::Printf(TEXT("%d"), TagsList.Num()));
 }
+

@@ -127,22 +127,22 @@ void ACodeBaseCamera::SetLocationTimerFunction()
 {
 	FTimerHandle TimerHandle;
 	bool ShouldMove = true;
-	float ErrorRange = 5.0f;
+	float ErrorRange = 0.5f;
 
 	FVector CurrentLocation = GetActorLocation();
 
 	if ((CurrentLocation.X <= TargetLocation.X + ErrorRange) && (CurrentLocation.X >= TargetLocation.X - ErrorRange))
-		if ((CurrentLocation.X <= TargetLocation.X + ErrorRange) && (CurrentLocation.X >= TargetLocation.X - ErrorRange))
+		if ((CurrentLocation.Y <= TargetLocation.Y + ErrorRange) && (CurrentLocation.Y >= TargetLocation.Y - ErrorRange))
 		{
 			SetActorLocation(TargetLocation);
-			GEngine->AddOnScreenDebugMessage(-1, 0.3f, FColor::Blue, FString::Printf(TEXT("X: %f, Y: %f"),
-				CurrentLocation.X, CurrentLocation.Y));
+			//GEngine->AddOnScreenDebugMessage(-1, 0.3f, FColor::Blue, FString::Printf(TEXT("X: %f, Y: %f"),
+			//	CurrentLocation.X, CurrentLocation.Y));
 			ShouldMove = false;
 		}
 
 	if (ShouldMove)
 	{
-		float InterpSpeed = 5.0f;
+		float InterpSpeed = 3.0f;
 		float TimerRate = 0.01f;
 		// 보간된 위치값 계산 (선형 보간 사용)
 		FVector InterpolatedLocation = FMath::VInterpTo(CurrentLocation, TargetLocation, GetWorld()->GetDeltaSeconds(), InterpSpeed);

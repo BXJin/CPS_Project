@@ -27,7 +27,7 @@ void ACodeDataManager::BeginPlay()
 	if (IsValid(MainHttpActor))
 	{
 		SetCurDataTypeAndURL(EData::ED_Main);
-		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &ACodeDataManager::SetTimerUpdateMainData, 3.0f, true);
+		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &ACodeDataManager::SetTimerUpdateMainData, 2.0f, true);
 	}
 
 	if (IsValid(MachineHttpActor))

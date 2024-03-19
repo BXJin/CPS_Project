@@ -75,7 +75,7 @@ void ACodeHttpActor::OnResponseReceived(FHttpRequestPtr Request, FHttpResponsePt
 	if (OnDataCompletedCallback.IsBound())
 	{
 		OnDataCompletedCallback.Broadcast();
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("BroadCast!"));
+		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("BroadCast!"));
 	}
 }
 
@@ -83,7 +83,7 @@ void ACodeHttpActor::SetURL(const FString& ChangeURL, bool IsObject)
 {
 	URL = ChangeURL;
 	IsObjectType = IsObject;
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, FString::Printf(TEXT("URL : %s"), *URL));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, FString::Printf(TEXT("URL : %s"), *URL));
 
 	SendHttpGet();
 }

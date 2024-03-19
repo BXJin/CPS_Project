@@ -6,8 +6,6 @@
 #include "GameFramework/Actor.h"
 #include "CodeBaseMachine.generated.h"
 
-class UStaticMeshComponent;
-
 UCLASS()
 class CPS_SMARTFACTORY_API ACodeBaseMachine : public AActor
 {
@@ -27,19 +25,25 @@ public:
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Code")
-	UStaticMeshComponent* MachineMesh;
+	bool IsHighLight;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Code")
-	bool IsHighLight;
+	FVector WorldLocation = FVector(0.0f, 0.0f, 0.0f);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Code")
+	int32 MachineID = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Code")
+	bool IsStaticType;
 
 public:
 	UFUNCTION(BlueprintCallable)
-	void SetHighLight();
+	virtual void SetHighLight();
 
 	UFUNCTION(BlueprintCallable)
-	void OnOutLine();
+	virtual void OnOutLine();
 
 	UFUNCTION(BlueprintCallable)
-	void OffOutLine();
+	virtual void OffOutLine();
 
 };

@@ -37,6 +37,7 @@ public:
 	bool IsStaticType;
 
 public:
+	// 자식클래스에서 재정의하여 쓸 함수들
 	UFUNCTION(BlueprintCallable)
 	virtual void SetHighLight();
 

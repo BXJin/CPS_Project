@@ -97,7 +97,7 @@ void ACodeDataManager::GetMainData()
 			{
 				TSharedPtr<FJsonObject> ObjectPtr = Value->AsObject();
 				auto type = ObjectPtr->GetIntegerField("type");
-				if (type == 2)
+				if (type != 1)
 				{
 					// 필요한 필드들을 추출
 					FString VcName = ObjectPtr->GetStringField("vcName");
